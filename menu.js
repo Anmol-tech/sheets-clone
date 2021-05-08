@@ -8,9 +8,11 @@ let right = document.querySelector(".right");
 
 let textColorInput = document.querySelector("#text-color");
 let textColorIcon = document.querySelector(".text-color-icon");
+let textColorBar = document.querySelector(".text-color-bar");
 
 let cellColorInput = document.querySelector("#cell-color");
 let cellColorIcon = document.querySelector(".cell-color-icon");
+let cellColorBar = document.querySelector(".cell-color-bar");
 
 let fontFamily = document.querySelector("#font-family");
 
@@ -78,7 +80,7 @@ textColorInput.addEventListener("change", function () {
 	let rowId = lastSelectedCell.getAttribute("row-id");
 	let colId = lastSelectedCell.getAttribute("col-id");
 	let newColor = textColorInput.value;
-	textColorIcon.style.color = newColor;
+	textColorBar.style.background = newColor;
 	lastSelectedCell.style.color = newColor;
 	db[rowId][colId].textColor = newColor;
 });
@@ -88,7 +90,7 @@ cellColorInput.addEventListener("change", function () {
 	let rowId = lastSelectedCell.getAttribute("row-id");
 	let colId = lastSelectedCell.getAttribute("col-id");
 	let newColor = cellColorInput.value;
-	cellColorIcon.style.color = newColor;
+	cellColorBar.style.background = newColor;
 	lastSelectedCell.style.background = newColor;
 	db[rowId][colId].cellColor = newColor;
 });
@@ -137,8 +139,8 @@ function setMenu(cellObject) {
 	fontSize.value = cellObject.fontStyle.fontSize;
 	fontFamily.value = cellObject.fontStyle.fontFamily;
 	fontFamily.style.fontFamily = cellObject.fontStyle.fontFamily;
-	textColorIcon.style.color = cellObject.textColor;
-	cellColorIcon.style.color = cellObject.cellColor;
+	textColorBar.style.background = cellObject.textColor;
+	cellColorBar.style.background = cellObject.cellColor;
 }
 
 function initMenu() {
@@ -151,6 +153,6 @@ function initMenu() {
 	fontSize.value = 12;
 	fontFamily.value = "Lato";
 	fontFamily.style.value = "Lato";
-	textColorIcon.style.color = "#000000";
-	cellColorIcon.style.color = "#000000";
+	textColorBar.style.background = "#000000";
+	cellColorBar.style.background = "#000000";
 }

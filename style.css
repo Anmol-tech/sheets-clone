@@ -29,9 +29,6 @@
 .menu-options {
 	height: 60px;
 	display: flex;
-	/* background: #dfe4ea; */
-	/* background: #9e9e9e; */
-	background: #2ecc71;
 
 	align-items: center;
 	border-bottom: 1px solid lightgrey;
@@ -40,7 +37,6 @@
 .calculations {
 	height: 30px;
 	display: flex;
-	background: beige;
 }
 
 .cells-content {
@@ -61,7 +57,7 @@
 }
 
 .cell {
-	border: 1px solid rgb(172, 168, 168, 0.3);
+	border: 1px solid lightgrey;
 	min-height: 25px;
 	min-width: 70px;
 	outline: none;
@@ -114,6 +110,8 @@
 }
 
 #address-input {
+	border: none;
+	outline: none;
 	background-color: rgb(211, 209, 209);
 	width: 60px;
 	text-align: center;
@@ -237,13 +235,23 @@
 	align-items: center;
 	border-radius: 5px;
 }
-.text-color {
-	position: relative;
-	border: 1px solid lightgrey;
-}
+.text-color,
 .cell-color {
+	padding: 2px;
 	position: relative;
 	border: 1px solid lightgrey;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.text-color-bar,
+.cell-color-bar {
+	width: 20px !important;
+	height: 5px !important;
+	/* margin-bottom: 5px; */
+	background-color: black;
 }
 #text-color,
 #cell-color {
