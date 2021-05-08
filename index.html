@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sheets Clone</title>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+			integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+			crossorigin="anonymous"
+		/>
+
+		<link
+			href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Teko:wght@300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link
+			href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<!-- <div class="menu">menu</div> -->
+		<div class="menu-options">
+			<div class="font-styles">
+				<div class="bold">
+					<i class="fas fa-bold"></i>
+				</div>
+				<div class="underline">
+					<i class="fas fa-underline"></i>
+				</div>
+				<div class="italic">
+					<i class="fas fa-italic"></i>
+				</div>
+			</div>
+			<div class="font-alignment">
+				<div class="left">
+					<i class="fas fa-align-left"></i>
+				</div>
+				<div class="center">
+					<i class="fas fa-align-center"></i>
+				</div>
+				<div class="right">
+					<i class="fas fa-align-right"></i>
+				</div>
+			</div>
+			<div class="font-family">
+				<select id="font-family">
+					<option value="Lato" class="Lato">Lato</option>
+					<option value="Roberto" class="Roboto">Roboto</option>
+					<option value="Oswald" class="Oswald">Oswald</option>
+					<option value="Source Sans Pro" class="Source-Sans-Pro">
+						Source Sans Pro
+					</option>
+					<option value="Teko" class="Teko">Teko</option>
+					<option value="Dancing Script" class="Dancing-Script">
+						Dancing Script
+					</option>
+				</select>
+				<select id="font-size"></select>
+			</div>
+			<div class="color-menu">
+				<div class="text-color">
+					<div class="fas fa-font text-color-icon">
+						<input type="color" id="text-color" />
+
+					</div>
+					
+				</div>
+				<div class="cell-color">
+					<div class="fas fa-fill-drip cell-color-icon">
+						<input type="color" id="cell-color" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="calculations">
+			<input type="text" id="address-input" disabled="true" />
+			<input type="text" id="formula-input" placeholder="Enter Formula" />
+		</div>
+		<div class="cells-content"></div>
+		<div class="sheets">
+			<div class="add-sheet"><i class="fas fa-plus"></i></div>
+			<div class="sheet-list">
+				<div class="sheet active-sheet" sid="0">Sheet 1</div>
+			</div>
+		</div>
+
+		<script src="./init.js"></script>
+		<script src="./script.js"></script>
+		<script src="./util.js"></script>
+		<script src="./sheet.js"></script>
+		<script src="./menu.js"></script>
+	</body>
+</html>
